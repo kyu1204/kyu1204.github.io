@@ -1,0 +1,205 @@
+---
+---
+<!DOCTYPE html>
+<html>
+  {% include head.html %}
+  <body itemscope itemtype="http://schema.org/BlogPosting">
+    {% include header.html %}
+    <main class="content" role="main">
+      <article class="post">
+        <div itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+          <meta itemprop="name" content="{{ site.title }}" />
+          <meta itemprop="url" content="{{ site.url }}" />
+          <div itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop="url" content="{{ site.url }}{{ site.logo }}" />
+          </div>
+        </div>
+        <div itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+          <meta itemprop="url" content="{{ site.url }}{{ site.author_image }}" />
+        </div>
+        <meta itemprop="headline" content="{{ page.title }}" />
+        <meta itemprop="mainEntityOfPage" content="{{ page.url }}" />
+        <meta itemprop="datePublished" content="{{ page.date }}" />
+        <meta itemprop="dateModified" content="{% if page.last_modified_at %}{{ page.last_modified_at }}{% else %}{{ page.date }}{% endif %}" />
+        {% if page.image %}
+        <div class="article-image">
+          <div class="post-image-image" style="background-image: url({% if page.image %}{{ page.image }}{% endif %})">
+            Article Image
+          </div>
+          <div class="post-image-image2" style="background-image: url({% if page.image2 %}{{ page.image2 }}{% endif %})">
+            Article Image
+          </div>
+          <div class="post-meta">
+            <h1 class="post-title" itemprop="name">
+              {{ page.title }}
+              {% if page.series %}
+                <span class="series">SERIES {{ page.series }}</span>
+              {% endif %}
+            </h1>
+            <div class="cf post-meta-text">
+              <div class="author-image" style="background-image: url({{ site.author_image }})">Blog Logo</div>
+              <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person">{{ site.author }}</h4>
+              on
+              <time datetime="{{ page.date | date: "%F %R" }}">{{ page.date | date_to_string }}</time>
+            </div>
+            <div style="text-align:center">
+              <a href="#topofpage" class="topofpage"><i class="nf nf-fa-angle-down"></i></a>
+            </div>
+          </div>
+        </div>
+        {% else %}
+        <div class="noarticleimage">
+          <div class="post-meta">
+            <h1 class="post-title">
+              {{ page.title }}
+              {% if page.series %}
+                <span class="series">SERIES {{ page.series }}</span>
+              {% endif %}
+            </h1>
+            <div class="cf post-meta-text">
+              <section class="share">
+                <div class="fb-like" data-href="{{ site.url }}{{ page.url }}" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+                <a data-pocket-label="pocket" data-pocket-count="none" class="pocket-btn" data-lang="ko"></a>
+                {% for social in site.social %}
+                  {% if social.share_url != null %}
+                    <a class="icon-{{ social.icon }}" href="{{ social.share_url }}{{ social.share_title }}{{page.title | cgi_escape}}{{ social.share_link }}{{site.url}}{{page.id}}.html"
+                      onclick="window.open(this.href, '{{ social.icon }}-share', 'width=550,height=255');return false;">
+                      <i class="nf nf-fa-{{ social.icon }}"></i><span class="hidden">{{ social.icon }}</span>
+                    </a>
+                  {% endif %}
+                {% endfor %}
+              </section>
+              <div class="author-info">
+                <div class="author-image" style="background-image: url({{ site.author_image }})">Blog Logo</div>
+                <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                  {%if page.author %}{{ page.author }}<meta itemprop="name" content="{{ page.author }}" />{% else %}{{ site.author }}<meta itemprop="name" content="{{ site.author }}" /><meta itemprop="url" content="{{ site.url }}/about" />{% endif %}
+                </h4>
+                on
+                <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date_to_string }}</time>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        {% endif %}
+        <section class="post-content">
+          <div class="post-reading">
+            <span class="post-reading-time"></span> read
+          </div>
+          <a name="topofpage"></a>
+          {{content|toc}}
+          <p class="tags">
+            {% for tag in page.tags %}
+              <a href="/tags#{{ tag | slugify }}-ref">{{ tag }}</a>
+            {% endfor %}
+          </p>
+        </section>
+        <footer class="post-footer">
+          <section class="share">
+            <div class="fb-like" data-href="{{ site.url }}{{ page.url }}" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+            <a data-pocket-label="pocket" data-pocket-count="none" class="pocket-btn" data-lang="ko"></a>
+            {% for social in site.social %}
+              {% if social.share_url != null %}
+                <a class="icon-{{ social.icon }}" href="{{ social.share_url }}{{ social.share_title }}{{page.title | cgi_escape}}{{ social.share_link }}{{site.url}}{{page.id}}"
+                  onclick="window.open(this.href, '{{ social.icon }}-share', 'width=550,height=255');return false;">
+                <i class="nf nf-fa-{{ social.icon }}"></i><span class="hidden">{{ social.icon }}</span>
+                </a>
+              {% endif %}
+            {% endfor %}
+          </section>
+        </footer>
+        <div class="bottom-teaser cf">
+          <div class="isLeft">
+            <h5 class="index-headline featured"><span>Written by</span></h5>
+            <section class="author">
+              <div class="author-image" style="background-image: url({{site.author_image}})">Blog Logo</div>
+              <h4>{{ site.author }}</h4>
+              <p class="bio">{{author.bio}}</p>
+              <hr>
+              <p class="published">Published <time datetime="{{ page.date | date: "%F %R" }}">{{ page.date | date_to_string }}</time></p>
+            </section>
+            <footer class="subscribe-info">
+                <section class="poweredby">Proudly published with <a href="http://jekyllrb.com"> Jekyll</a></section>
+                <a class="subscribe" href="{{ site.feedly }}"  target="blank"><img id='feedlyFollow' src='//s3.feedly.com/img/follows/feedly-follow-logo-black_2x.png' alt='follow us in feedly' width='18' height='18'> Feedly 구독하기</a><br />
+                <a class="subscribe" href="{{ "/feed.xml" | prepend: site.baseurl }}"> <span class="tooltip"> <i class="nf nf-fa-rss"></i> RSS 구독하기</span></a><br />
+                {% if site.mailchimp %} 
+                  <a class="subscribe" href="{{ site.mailchimp }}" target="_blank"> <span class="tooltip"> <i class="nf nf-oct-mail"></i> Email 구독하기</span></a>
+                {% endif %}
+            </footer>
+          </div>
+
+          <div class="isRight">
+            <h5 class="index-headline featured"><span>Supported by</span></h5>
+            <div class="googleads">
+              {% if site.google_ad_slot_1_id %}
+                <!-- 기본 광고 -->
+                <ins class="adsbygoogle"
+                    style="display:block"
+                    data-ad-client="{{ site.google_ad_client }}"
+                    data-ad-slot="{{ site.google_ad_slot_1_id }}"
+                    data-ad-format="auto"></ins>
+                <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+
+        
+
+        {% if page.comments %} 
+        <div class="fb-comments-wrapper">
+          {% if page.fb_social_baseurl %} 
+            <div class="fb-comments" data-href="{{ page.fb_social_baseurl }}{{ page.url }}" data-num-posts="5" data-order-by="social" data-width="100%"></div>
+          {% else %}
+            <div class="fb-comments" data-href="{{ site.url }}{{ page.url }}" data-num-posts="5" data-order-by="social" data-width="100%"></div>
+          {% endif %}
+        </div>
+        {% endif %}
+
+        {%if site.disqus %}
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = '{{site.disqus}}'; // required: replace example with your forum shortname
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        {% endif %}
+      </article>
+    </main>
+
+    <aside class="read-next">
+      {% if page.next.url %}
+        <a class="read-next-story no-cover" href="{{page.next.url}}">
+          <section class="post">
+            <h2>{{page.next.title}}</h2>
+            <p>{{page.next.excerpt | strip_html | truncatewords: 15 }}</p>
+          </section>
+        </a>
+      {% endif %}
+      {% if page.previous.url %}
+        <a class="read-next-story prev no-cover" href="{{page.previous.url}}">
+          <section class="post">
+            <h2>{{page.previous.title}}</h2>
+            <p>{{page.previous.excerpt | strip_html | truncatewords: 15 }}</p>
+          </section>
+        </a>
+      {% endif %}
+    </aside>
+    <footer class="post-site-footer clearfix">
+      <section class="copyright"><a href="/">{{ site.title }}</a> © {{ site.time | date: '%Y' }}</section>
+    </footer>
+
+    {% include javascripts.html %}
+  </body>
+</html>

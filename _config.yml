@@ -1,0 +1,79 @@
+# Build settings
+gems:
+  - jemoji
+  - jekyll-paginate
+  - jekyll-gist
+  - jekyll-sitemap
+  - jekyll-toc
+
+# Site settings
+title: "Harry's Blog"
+description: > # this means to ignore newlines until "email:"
+   Harry's 블로그
+email: pb1123love@gamil.com
+#blog logo
+logo: "/assets/images/df_logo.png"
+# blog cover
+cover: "/assets/images/background_image_2.jpg"
+
+name: 'harry'
+author: 'harry'
+author_image: "/assets/images/author.jpg"
+
+paginate:	15
+
+permalink: /:year/:month/:day/:title.html
+
+timezone: "Asia/Seoul"
+
+url: "https://kyu1204.github.io" # the base hostname & protocol for your site
+# url: "http://0.0.0.0:4000" # the base hostname & protocol for your site
+baseurl: ""
+mailchimp: ""
+feedly: ""
+#used to display twitter cards
+twitter_handle: "@"
+
+#fill in disqus shortname to use disqus
+#disqus: disqus-shortname
+
+# for thumbnail
+absolute_root_path: D:\harry\kyu1204.github.io
+
+# tracking & ad code
+fb_app_id: "1611862309129685"
+google_analytics_id: "UA-43194822-1"
+google_ad_client: "ca-pub-2468713653725581"
+google_ad_slot_1_id: "1015072194"
+google_ad_slot_2_id: "8649023787"
+naver_site_verification: "cc257cc7988ed85c9db6c228330b4870f9dfa25f"
+
+# social icons and sharing options
+social:
+  - icon:	twitter
+    url:	https://twitter.com/
+    desc: Follow me on twitter
+    share_url: http://twitter.com/share
+    share_title: ?text=
+    share_link: "&amp;url="
+
+# - icon:	facebook
+#   url:	https://facebook.com/subicura
+#   desc: Connect with me facebook
+#   share_url: https://www.facebook.com/sharer.php
+#   share_title: ?t=
+#   share_link: "&amp;u="
+
+  - icon:	github
+    url:	https://github.com/kyu1204
+    desc:	Fork me on github
+    share_url:
+    share_title:
+    share_link:
+
+#  - icon:	google-plus
+#    url:	https://google.com/???
+#    desc:	Add me on google+
+#    share_url:
+#    share_title:
+#    share_link:
