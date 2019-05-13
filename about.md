@@ -14,7 +14,7 @@ permalink: /about/
 아크릴에서 소프트웨어 엔지니어로 서버관리부터 개발까지 여러가지 일을 하고 있습니다. 인공지능과 백엔드에 관심이 많습니다. tensorflow와 관련된 논문에 관심이 많고 다양한 인공지능 알고리즘을 좋아합니다. 최근 관심사는 [GAN](https://ko.wikipedia.org/wiki/%EC%83%9D%EC%84%B1%EC%A0%81_%EC%A0%81%EB%8C%80_%EC%8B%A0%EA%B2%BD%EB%A7%9D), [NLP](https://ko.wikipedia.org/wiki/%EC%9E%90%EC%97%B0%EC%96%B4_%EC%B2%98%EB%A6%AC), [Elasticsearch](https://www.elastic.co), [go](https://golang.org/)입니다.
 
 
-> Intellectuals solve problems, geniuses prevent them. -Albert Einstein (1879 ~ 1955)
+>*__Intellectuals solve problems, geniuses prevent them.__ - Albert Einstein (1879 ~ 1955)*
 
 ---
 
