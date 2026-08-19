@@ -402,6 +402,6 @@ secret 에 대한 중요한 데이터를 private git server에 올리면 상관 
 
 ## Reference
 
-- HashiCorp Vault: [](https://www.vaultproject.io/)[https://www.vaultproject.io/](https://www.vaultproject.io/)
-- argocd-vault-plugin: [](https://argocd-vault-plugin.readthedocs.io/en/stable/)[https://argocd-vault-plugin.readthedocs.io/en/stable/](https://argocd-vault-plugin.readthedocs.io/en/stable/)
-- [](https://velog.io/@wlgns5376/GitOps-ArgoCD%EC%97%90-Vault-%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0)[https://velog.io/@wlgns5376/GitOps-ArgoCD에-Vault-적용하기](https://velog.io/@wlgns5376/GitOps-ArgoCD%EC%97%90-Vault-%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0)
+- [HashiCorp Vault](https://www.vaultproject.io/)
+- [argocd-vault-plugin](https://argocd-vault-plugin.readthedocs.io/en/stable/)
+- [GitOps ArgoCD에 Vault 적용하기](https://velog.io/@wlgns5376/GitOps-ArgoCD%EC%97%90-Vault-%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0)

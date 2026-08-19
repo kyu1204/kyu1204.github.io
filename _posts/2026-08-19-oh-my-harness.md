@@ -99,5 +99,5 @@ omh sync --check  # 생성 파일이 stale하면 exit 1 - CI 게이트
 
 ## Reference
 
-- https://github.com/kyu1204/oh-my-harness
-- https://www.npmjs.com/package/oh-my-harness
+- [kyu1204/oh-my-harness](https://github.com/kyu1204/oh-my-harness)
+- [oh-my-harness - npm](https://www.npmjs.com/package/oh-my-harness)

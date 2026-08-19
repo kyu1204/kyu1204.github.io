@@ -124,5 +124,4 @@ Pro 플랜은 30일 무료 체험을 제공하니 부담 없이 써볼 수 있�
 
 ## Reference
 
-- https://hudy.co.kr
-- https://api.hudy.co.kr
+- [HuDy](https://hudy.co.kr)

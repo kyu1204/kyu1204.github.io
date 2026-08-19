@@ -181,6 +181,6 @@ Obsidian Sync 에 대해 셀프 호스팅을 직접 해봤는데, 결제해서 �
 
 다만 본인이 놀고 있는 서버가 있고, 개인 도메인이 있는 진성 IT 덕후라면 한번 시도해볼만합니다. iCloud에 비하면 3G -> 5G 급 sync 속도변화가 일어나고 obsidian-git 처럼 매번 커밋 풀 할 필요 없이 live sync까지 되니 한번 구축해두면 정말 잘 쓸 수 있을 것 같아 강추드립니다.
 
-## Referance
-- https://github.com/vrtmrz/obsidian-livesync
-- https://gist.github.com/yeongu-dev/08dfbadc9a7c79d23b1022a30dd7eebe
+## Reference
+- [vrtmrz/obsidian-livesync](https://github.com/vrtmrz/obsidian-livesync)
+- [obsidian-livesync 셋업 가이드 gist](https://gist.github.com/yeongu-dev/08dfbadc9a7c79d23b1022a30dd7eebe)
