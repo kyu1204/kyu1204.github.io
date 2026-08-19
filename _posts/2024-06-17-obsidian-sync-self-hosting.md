@@ -1,8 +1,9 @@
 ---
-title: couchdb를 이용해 obisidian sync 셀프 호스팅 하기
+title: couchdb를 이용해 obsidian sync 셀프 호스팅 하기
+description: CouchDB와 Self-hosted LiveSync 플러그인으로 obsidian 동기화를 직접 셀프 호스팅하는 방법을 정리했습니다.
 categories: [obsidian]
 tags: [couchdb, obsidian, self-hosting]
-date: 2023-06-17 00:00:00 +09:00
+date: 2024-06-17 00:00:00 +09:00
 image: obsidian.webp
 img_path: /assets/img/obsidian-sync/
 ---

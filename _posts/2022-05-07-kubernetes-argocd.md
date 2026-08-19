@@ -1,5 +1,6 @@
 ---
 title: Kubernetes cloud에 ArgoCD배포하기
+description: GitOps CD 툴인 ArgoCD를 kubernetes 클러스터에 설치하고 초기 설정하는 과정을 정리했습니다.
 categories: [kubernetes, argocd]
 tags: [cloud, kubernetes, argocd, devops, ci/cd]
 image: cover-argo.jpeg

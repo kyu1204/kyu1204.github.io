@@ -1,5 +1,6 @@
 ---
 title: Kubespray 를 이용한 kubernetes 배포
+description: Ansible 기반 Kubespray로 HA 구성이 포함된 kubernetes 클러스터를 배포하는 과정을 단계별로 정리했습니다.
 categories: [kubernetes]
 tags: [cloud, kubernetes, ansible, kubespray]
 image: /assets/img/k8s.png

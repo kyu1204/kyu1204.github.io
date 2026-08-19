@@ -6,7 +6,7 @@ theme: jekyll-theme-chirpy
 # The language of the webpage › http://www.lingoes.net/en/translator/langcode.htm
 # If it has the same name as one of the files in folder `_data/locales`, the layout language will also be changed,
 # otherwise, the layout language will use the default value of 'en'.
-lang: en
+lang: ko
 
 # Change to your timezone › https://kevinnovak.github.io/Time-Zone-Picker
 timezone: Asia/Seoul
@@ -28,8 +28,8 @@ url: "https://ctudy.com"
 github:
   username: kyu1204 # change to your github username
 
-#twitter:
-  #username: MINT60812021 # change to your twitter username
+twitter:
+  username: MINTr5dw # change to your twitter username
 
 social:
   # Change to your full name.

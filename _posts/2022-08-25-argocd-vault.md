@@ -1,5 +1,6 @@
 ---
 title: ArgoCD에 Vault 연동하기
+description: Git Repository의 민감 정보를 보호하기 위해 Vault를 설치하고 argocd-vault-plugin으로 ArgoCD와 연동하는 방법을 정리했습니다.
 categories: [kubernetes, vault]
 tags: [cloud, argocd, devops, ci/cd, vault, secure]
 image: /assets/img/argocd-vault.webp

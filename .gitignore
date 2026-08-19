@@ -21,4 +21,5 @@ package-lock.json
 # Misc
 .DS_Store
 _posts/.obsidian
+.obsidian
 _posts/templates
